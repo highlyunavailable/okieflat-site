@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block stylesheets %}<link rel="stylesheet" type="text/css" href="/static/content/tablesorter-style.css" />{% endblock %}
+{% block content %}
+<h3 class="lead">
+  Mathis Organic Produce proudly presents its offerings for the upcoming
+  2014 harvest season.
+</h3>
+<p>
+  Produce will become available for purchase during the months of August through October. You can also find them in Reno, NV or online at <a href="http://dropp.coop/">
+    DROPP (Distributors of Regional &amp; Organic Produce &amp; Products)</a>. Harvest will be dependent on the success of the newly planted crops.
+</p>
+
+<h2>Our Menu</h2>
+
+{% for product in products %}
+<div class="panel panel-default">
+  <div class="panel-heading">{{ product.item }}</div>
+  <div class="panel-body">{{ product.description }}</div>
+  <table class="table tablesorter">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th colspan="2">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in product['items']%}
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{% if item.get('image') %}<img src="{{item.image}}" alt="{{item.name}}" /> {% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endfor %}
+
+{% endblock %}
+{% block scripts %}
+<script src="static/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    // call the tablesorter plugin
+    $("table").tablesorter({
+      // sort on the first column, order asc
+      sortList: [[0, 0]],
+      headers: {
+        // assign the secound column (we start counting zero)
+        1: {
+          // disable it by setting the property sorter to false
+          sorter: false
+        }
+      }
+    });
+  });
+</script>
+{% endblock %}
