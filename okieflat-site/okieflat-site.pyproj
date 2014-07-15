@@ -17,8 +17,9 @@
     <PythonWsgiHandler>{StartupModule}.wsgi_app</PythonWsgiHandler>
     <Name>okieflat-site</Name>
     <RootNamespace>okieflat-site</RootNamespace>
-    <InterpreterId>{7caf4467-deb8-4317-b8b6-28890fe1a878}</InterpreterId>
+    <InterpreterId>{9aa5277b-9a8d-4899-b2ec-a956bbbfd121}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
+    <NameOfLastUsedPublishProfile>AWS</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,16 +37,21 @@
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include=".ebextensions\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
     <Folder Include="static\data\" />
     <Folder Include="static\images\" />
+    <Folder Include="static\images\photos\" />
+    <Folder Include="static\images\thumbs\" />
     <Folder Include="static\scripts\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".ebextensions\000-python.config" />
     <Content Include="requirements.txt" />
+    <Content Include="static\content\bootstrap-theme.min.css" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
@@ -55,9 +61,33 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\images\photos\1.jpg" />
+    <Content Include="static\images\photos\10.jpg" />
+    <Content Include="static\images\photos\11.jpg" />
+    <Content Include="static\images\photos\12.jpg" />
+    <Content Include="static\images\photos\2.jpg" />
+    <Content Include="static\images\photos\3.jpg" />
+    <Content Include="static\images\photos\4.jpg" />
+    <Content Include="static\images\photos\5.jpg" />
+    <Content Include="static\images\photos\6.jpg" />
+    <Content Include="static\images\photos\7.jpg" />
+    <Content Include="static\images\photos\8.jpg" />
+    <Content Include="static\images\photos\9.jpg" />
     <Content Include="static\images\asc.gif" />
     <Content Include="static\images\bg.gif" />
     <Content Include="static\images\desc.gif" />
+    <Content Include="static\images\thumbs\t01.jpg" />
+    <Content Include="static\images\thumbs\t02.jpg" />
+    <Content Include="static\images\thumbs\t03.jpg" />
+    <Content Include="static\images\thumbs\t04.jpg" />
+    <Content Include="static\images\thumbs\t05.jpg" />
+    <Content Include="static\images\thumbs\t06.jpg" />
+    <Content Include="static\images\thumbs\t07.jpg" />
+    <Content Include="static\images\thumbs\t08.jpg" />
+    <Content Include="static\images\thumbs\t09.jpg" />
+    <Content Include="static\images\thumbs\t10.jpg" />
+    <Content Include="static\images\thumbs\t11.jpg" />
+    <Content Include="static\images\thumbs\t12.jpg" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
@@ -80,6 +110,17 @@
     <Content Include="templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="env27\">
+      <Id>{9aa5277b-9a8d-4899-b2ec-a956bbbfd121}</Id>
+      <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
+      <Version>3.4</Version>
+      <Description>env27 (Python 3.4)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
     <Interpreter Include="env\">
       <Id>{7caf4467-deb8-4317-b8b6-28890fe1a878}</Id>
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>

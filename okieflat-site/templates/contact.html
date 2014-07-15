@@ -1,20 +1,43 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="row"><div class="col-xs-12"><h2>Contact Us</h2></div></div>
+<div class="row">
+  <div class="col-xs-12 col-lg-4">
+    <img src="../static/images/thumbs/t09.jpg" class="img-thumbnail" />
+    <hr />
+    <address>
+      <strong>Richard M. Mathis</strong>
+      <p><span class="glyphicon glyphicon-phone"></span> <a href="tel:+17028048504">(702) 804-8504</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:okieflat@gmail.com">Send E-mail</a></p>
+    </address>
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+    <address>
+      <strong>Nilima Srikantha</strong>
+      <p><span class="glyphicon glyphicon-phone"></span> <a href="tel:+14258616611">(425) 861-6611</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:okieflat@gmail.com">Send E-mail</a></p>
+    </address>
+  </div>
+  <div class="col-xs-12 col-lg-8">
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:500px;width:600px;">
+      <div id="gmap_canvas" style="height:500px;width:600px;"></div>
+      <style>
+        #gmap_canvas img {
+          max-width: none !important;
+          background: none !important;
+        }
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
-
+        #maps {
+          width: 600px;
+          font-size: 10px;
+          font-family: arial;
+          text-align: right;
+        }
+      </style>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">jQuery(document).ready(function () { jQuery('.gmap').hide(); jQuery("#maps span").click(function () { var $this = $(this); $this.next("div").fadeToggle(); $('.gmap').not($this.next("div")).fadeOut(); }); });</script>
+    <script type="text/javascript"> function init_map() { var myOptions = { zoom: 14, center: new google.maps.LatLng(38.8298554, -119.33702700000003), mapTypeId: google.maps.MapTypeId.SATELLITE }; map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(38.8298554, -119.33702700000003) }); infowindow = new google.maps.InfoWindow({ content: "<div class=\"text-center\" style=\"width:120px\"><strong>Okie Flat</strong><br />222 Artist View<br />Wellington, NV</div>" }); google.maps.event.addListener(marker, "click", function () { infowindow.open(map, marker); }); infowindow.open(map, marker); } google.maps.event.addDomListener(window, 'load', init_map);</script><div id="maps"><span>Google Maps &copy; 2014</span></div>
+  </div>
+</div>
 {% endblock %}
