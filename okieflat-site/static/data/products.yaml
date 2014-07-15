@@ -1,0 +1,62 @@
+- item: Potatos
+  ordinal: 1
+  description: Potatos will be available starting late August and through October.
+  items:
+    - name: Ama Rosa
+      description: Fingerling sized with red skin and red flesh.
+    - name: Austrian Cresent
+      description: Fingerling sized with all yellow flesh.
+    - name: Cikliman
+      description: Red skin with white flesh.
+    - name: Huckleberry Gold
+      description: Purple skinned with yellow flesh.
+    - name: Purple Majesty
+      description: Specialty potato with purple skin and flesh.
+    - name: Purple Viking
+      description: Purple skinned with white flesh.
+    - name: Red Lasoda
+      description: Red skin with white flesh.
+    - name: Russian Blue
+      description: Purple skin and flesh.
+    - name: Terra Rosa
+      description: Specialty potato with red skin and flesh.
+    - name: All Blue
+      description: Specialty potato with blue skin and flesh.
+    - name: Butte
+      description: A classic Russet; a great baking potato.
+    - name: Caribe
+      description: Blue skin with extremely white flesh.
+    - name: Island Sunshine
+      description: Yellow skin with dark yellow flesh.
+- item: Tomatillos
+  ordinal: 2
+  description: Tomatillos will be available starting in August.
+  items:
+    - name: Tomatillo Mesa Verde
+      description: A classic green variety.
+    - name: Purple Tomatillo
+      description: A heirloom purple variety.
+- item: Melons
+  ordinal: 3 
+  description: Melons will be available starting in late August through early September.
+  items:
+    - name: Klondike Blue Ribbon Watermelon
+      description: A classic watermelon with red flesh.
+    - name: Baby Doll F1 Hybrid Watermelon
+      description: A hybrid variety with yellow flesh.
+    - name: Arava F1 Hybrid Melon
+      description: A hybrid variety with green flesh.
+- item: Hard Squashes
+  ordinal: 4
+  description: Hard squashes will be available starting in early September.
+  items:
+    - name: Nutterbutter Butternut Squash
+      description: A classic medium-sized variety.
+    - name: Spaghetti Squash
+      description: A classic medium-sized variety.
+- item: Pumpkins
+  ordinal: 5
+  description: Pumpkins will be available starting in October.
+  items:
+    - name: Rouge Vif D'etampes
+      description: A classic Cinderella pumpkin.
